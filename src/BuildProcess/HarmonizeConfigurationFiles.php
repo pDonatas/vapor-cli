@@ -22,6 +22,8 @@ class HarmonizeConfigurationFiles
             $this->path.'/vendor/laravel/framework/config',
             $this->path.'/config',
         ] as $path) {
+            Helpers::line("Processing path: $path");
+
             if (! is_dir($path)) {
                 continue;
             }
