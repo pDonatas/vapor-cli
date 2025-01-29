@@ -24,10 +24,10 @@ class HarmonizeConfigurationFiles
             $this->appPath.'/vendor/laravel/framework/config',
             $this->appPath.'/config',
         ] as $path) {
-            Helpers::step("Processing path: $path");
+            Helpers::step("<options=bold>Processing path: $path</>");
 
             if (! is_dir($path)) {
-                Helpers::step("Path $path is not a directory, skipping.");
+                Helpers::step("<options=bold>Path $path is not a directory, skipping.</>");
 
                 continue;
             }
