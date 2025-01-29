@@ -19,8 +19,8 @@ class HarmonizeConfigurationFiles
         Helpers::step('<options=bold>Harmonizing Configuration Files</>');
 
         foreach ([
-            $this->appPath.'/vendor/laravel/framework/config',
-            $this->appPath.'/config',
+            $this->path.'/vendor/laravel/framework/config',
+            $this->path.'/config',
         ] as $path) {
             if (! is_dir($path)) {
                 continue;
