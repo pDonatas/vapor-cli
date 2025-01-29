@@ -21,10 +21,14 @@ class HarmonizeConfigurationFiles
         foreach ([
             $this->path.'/vendor/laravel/framework/config',
             $this->path.'/config',
+            $this->appPath.'/vendor/laravel/framework/config',
+            $this->appPath.'/config',
         ] as $path) {
             Helpers::line("Processing path: $path");
 
             if (! is_dir($path)) {
+                Helpers::line("Path $path is not a directory, skipping.");
+
                 continue;
             }
 
